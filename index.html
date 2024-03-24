@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="manifest" href="/manifest.json" />
+  <!-- ios support -->
+  <link rel="apple-touch-icon" href="images/icons/icon-72x72.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-96x96.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-128x128.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-144x144.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-152x152.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-192x192.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-384x384.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-512x512.png" />
+  <meta name="apple-mobile-web-app-status-bar" content="#333" />
+  <meta name="theme-color" content="#333" />
+  <title>Artillery Calculator</title>
+</head>
+<body>
+  <main>
+    <nav>
+      <div class="navbar">
+        <a href="#" onclick="showPage(1)">MENU</a>
+        <a href="#" onclick="showPage(2)">About</a>
+      </div>
+    </nav>
+    <div id="page1" class="container">
+      <h2>Artillery Calculator</h2>
+      <label for="inputDistance">Enter a distance (between 100 and 1600):</label>
+      <div class="calculator">
+        <select id="factionSelect">
+          <option value="german">US/GER</option>
+          <option value="soviet">SOVIET</option>
+          <option value="britain">BRITAIN</option>
+        </select>
+        <input type="number" id="inputDistance" min="100" max="1600" value="1600">
+        <button onclick="calculate()" class="full-width" id="result">Calculate</button>
+        <div id="numberButtons" class="numberButtons">
+          <button onclick="updateInput(1)">1</button>
+          <button onclick="updateInput(2)">2</button>
+          <button onclick="updateInput(3)">3</button>
+        </div>
+        <div id="numberButtons" class="numberButtons">
+          <button onclick="updateInput(4)">4</button>
+          <button onclick="updateInput(5)">5</button>
+          <button onclick="updateInput(6)">6</button>
+        </div>
+        <div id="numberButtons" class="numberButtons">
+          <button onclick="updateInput(7)">7</button>
+          <button onclick="updateInput(8)">8</button>
+          <button onclick="updateInput(9)">9</button>
+        </div>
+        <div id="numberButtons" class="numberButtons">
+          <button onclick="updateInput(0)" class="full-width" id="button0" disabled>0</button>
+        </div>
+        
+        
+        <p id="error" style="color: red;"></p>
+      </div>
+    </div>
+    <div id="page2" class="container" style="display: none;">
+      <!-- Placeholder for Page 2 content -->
+      <p>
+        This application is currently under development, and more features will be available soon.
+      </p>
+      <br>
+      <div class="numberButtons">
+        <img src="images/about.png" style="max-width: 100%;">
+      </div>
+    </div>
+  </main>
+  <script src="js/app.js"></script>
+</body>
+</html>
