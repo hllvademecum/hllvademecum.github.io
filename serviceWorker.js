@@ -1,4 +1,4 @@
-const staticHLLVadeMecum = "hll-vade-mecum-v1"
+const staticHLLVadeMecum = "hll-vade-mecum-v1.1"
 const assets = [
   "/",
   "/index.html",
