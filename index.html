@@ -2,8 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="description" content="HLL vade mecum is a tool dedicated to the Hell Let Loose game, this web application has been created with ❤️ for all players who wish to improve their gaming experience and can be shared with the worldwide community.">
+  <meta name="keywords" content="HLL, vade, mecum, artillery, calculator">
+  <meta name="author" content="PePPe PiG with the support of ChatGPT">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="manifest" href="/manifest.json" />
   <!-- ios support -->
@@ -17,27 +23,27 @@
   <link rel="apple-touch-icon" href="images/icons/icon-512x512.png" />
   <meta name="apple-mobile-web-app-status-bar" content="#333" />
   <meta name="theme-color" content="#333" />
-  <title>Artillery Calculator</title>
+  <title>HLL vade mecum</title>
 </head>
 <body>
   <main>
     <nav>
       <div class="navbar">
-        <a href="#" onclick="showPage(1)">MENU</a>
-        <a href="#" onclick="showPage(2)">About</a>
+        <span onclick="showPage(1)">MENU</span>
+        <span onclick="showPage(2)">About</span>
       </div>
     </nav>
     <div id="page1" class="container">
-      <h2>Artillery Calculator</h2>
-      <label for="inputDistance">Enter a distance (between 100 and 1600):</label>
+      <h1>ARTILLERY CALCULATOR</h1>
+      <p>Enter a distance (between 100 and 1600):</p>
       <div class="calculator">
         <select id="factionSelect">
           <option value="german">US/GER</option>
           <option value="soviet">SOVIET</option>
           <option value="britain">BRITAIN</option>
-        </select>
-        <input type="number" id="inputDistance" min="100" max="1600" value="1600">
-        <button onclick="calculate()" class="full-width" id="result">Calculate</button>
+        </select>      
+        <input id="inputDistance" value="">
+        <button onclick="calculate()" class="full-width">CALCULATE</button>
         <div id="numberButtons" class="numberButtons">
           <button onclick="updateInput(1)">1</button>
           <button onclick="updateInput(2)">2</button>
@@ -64,7 +70,11 @@
     <div id="page2" class="container" style="display: none;">
       <!-- Placeholder for Page 2 content -->
       <p>
-        This application is currently under development, and more features will be available soon.
+        <i>This application is currently under development, and more features will be available soon.</i>
+      </p>
+      <br>
+      <p>
+        <b>HLL vade mecum</b> is a tool dedicated to the Hell Let Loose game, this web application has been created with ❤️ for all players who wish to improve their gaming experience and can be shared with the worldwide fighting kitten community.
       </p>
       <br>
       <div class="numberButtons">

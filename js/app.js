@@ -26,7 +26,6 @@ function updateInput(num) {
   if (resetInputDistance) {
     document.getElementById("inputDistance").value = "";
     resetInputDistance = false;
-    document.getElementById("result").innerHTML = "Calculate"
   }
   var inputField = document.getElementById("inputDistance");
   inputField.value += num;
@@ -41,7 +40,7 @@ function calculate() {
   var m, b;
 
   if (isNaN(x) || x < 100 || x > 1600) {
-    document.getElementById("error").innerHTML = "Error: Distance must be between 100 and 1600.";
+    document.getElementById("error").innerHTML = "Error: Distance must be between 100 and 1600 M.";
     document.getElementById("inputDistance").value = ""; // Reset inputDistance value
     return;
   } else {
@@ -68,7 +67,7 @@ function calculate() {
 
   var result = m * x + b;
   result = Math.round(result);
-  document.getElementById("result").innerHTML = "Result: " + result;
+  document.getElementById("inputDistance").value = x + " M | " + result +" MIL";
 }
 
 function toggleButton0() {
