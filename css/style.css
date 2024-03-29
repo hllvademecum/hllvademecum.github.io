@@ -75,7 +75,7 @@ input {
 }
 .calculator button:disabled {
   background-color: #555; /* gris */
-  color: #F5F5DC; /* beige */
+  color: #bfbab6; /* beige */
   cursor: not-allowed;
   pointer-events: none;
 }
