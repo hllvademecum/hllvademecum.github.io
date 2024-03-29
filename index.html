@@ -34,7 +34,7 @@
       </div>
     </nav>
     <div id="page1" class="container">
-      <h1>ARTILLERY CALCULATOR</h1>
+      <h2>ARTILLERY CALCULATOR</h2>
       <p>Enter a distance (between 100 and 1600):</p>
       <div class="calculator">
         <select id="factionSelect">
@@ -60,7 +60,8 @@
           <button onclick="updateInput(9)">9</button>
         </div>
         <div id="numberButtons" class="numberButtons">
-          <button onclick="updateInput(0)" class="full-width" id="button0" disabled>0</button>
+          <button onclick="updateInput('00')" id="button00" disabled>00</button>
+          <button onclick="updateInput(0)" id="button0" disabled>0</button>
         </div>
         
         

@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: sans-serif;
   background-color: #1E1E1E; /* gris foncé */
   color: #bfbab6; /* gris clair */
 }
@@ -62,7 +62,6 @@ input {
   justify-content: space-between;
 }
 .calculator button {
-  font-family: "Barlow Condensed", sans-serif;
   font-weight: 700;
   flex-grow: 1;
   padding: 20px;
@@ -78,13 +77,10 @@ input {
   background-color: #555; /* gris */
   color: #F5F5DC; /* beige */
   cursor: not-allowed;
+  pointer-events: none;
 }
 .calculator button.full-width {
   flex-basis: 100%;
-}
-.calculator button:hover {
-  background-color: #555; /* gris */
-  color: #F5F5DC; /* beige */
 }
 #result, #error {
   text-align: center;

@@ -72,5 +72,7 @@ function calculate() {
 
 function toggleButton0() {
   var button0 = document.getElementById("button0");
+  var button00 = document.getElementById("button00");
   button0.disabled = resetInputDistance;
+  button00.disabled = resetInputDistance;
 }
