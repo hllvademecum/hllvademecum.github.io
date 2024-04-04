@@ -1,4 +1,4 @@
-const staticHLLVadeMecum = "hll-vade-mecum-v1.5"; // Update the cache version when changes are made
+const staticHLLVadeMecum = "hll-vade-mecum-v1.6"; // Update the cache version when changes are made
 const assets = [
   "/",
   "/index.html",
@@ -11,7 +11,7 @@ const assets = [
 self.addEventListener("install", installEvent => {
   installEvent.waitUntil(
     caches.open(staticHLLVadeMecum).then(cache => {
-      return cache.addAll(assets); // Return the promise chain to properly handle errors
+      return cache.addAll(assets.map(url => url + '?v=' + staticHLLVadeMecum)); // Append cache version to asset URLs
     })
   );
 });
