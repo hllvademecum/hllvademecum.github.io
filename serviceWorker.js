@@ -1,4 +1,4 @@
-const staticHLLVadeMecum = "hll-vade-mecum-v1.6"; // Update the cache version when changes are made
+const staticHLLVadeMecum = "hll-vade-mecum-v1.7"; // Update the cache version when changes are made
 const assets = [
   "/",
   "/index.html",
@@ -9,6 +9,8 @@ const assets = [
 ];
 
 self.addEventListener("install", installEvent => {
+  self.skipWaiting(); // Force the service worker to become active immediately
+
   installEvent.waitUntil(
     caches.open(staticHLLVadeMecum).then(cache => {
       return cache.addAll(assets.map(url => url + '?v=' + staticHLLVadeMecum)); // Append cache version to asset URLs
