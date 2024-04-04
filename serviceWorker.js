@@ -1,4 +1,4 @@
-const staticHLLVadeMecum = "hll-vade-mecum-v1.4"; // Update the cache version when changes are made
+const staticHLLVadeMecum = "hll-vade-mecum-v1.5"; // Update the cache version when changes are made
 const assets = [
   "/",
   "/index.html",

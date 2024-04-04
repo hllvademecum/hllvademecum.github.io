@@ -19,7 +19,9 @@ document.getElementById("inputDistance").addEventListener("blur", function() {
 });
 
 document.getElementById("factionSelect").addEventListener("change", function() {
-  calculate();
+  if (document.getElementById("inputDistance").value) {
+    calculate();
+  }
 });
 
 function updateInput(num) {
@@ -29,12 +31,27 @@ function updateInput(num) {
   }
   var inputField = document.getElementById("inputDistance");
   inputField.value += num;
-  toggleButton0(); // Toggle button0 based on resetInputDistance
+  toggleButtons(); // Toggle buttons based on resetInputDistance
   }
+
+function clearLastInput() {
+  var inputField = document.getElementById("inputDistance");
+  var value = inputField.value;
+  
+  if (value.length > 0 && !resetInputDistance) {
+    // Remove the last character from the value
+    var newValue = value.substring(0, value.length - 1);
+    inputField.value = newValue;
+  } 
+  if (newValue.length == 0) {
+    resetInputDistance = true;
+    toggleButtons(); // Toggle buttons based on resetInputDistance
+  }
+}
 
 function calculate() {
   resetInputDistance = true; // Set to true before executing calculate
-  toggleButton0(); // Toggle button0 based on resetInputDistance
+  toggleButtons(); // Toggle buttons based on resetInputDistance
   var faction = document.getElementById("factionSelect").value;
   var x = parseInt(document.getElementById("inputDistance").value);
   var m, b;
@@ -70,7 +87,7 @@ function calculate() {
   document.getElementById("inputDistance").value = x + " M | " + result +" MIL";
 }
 
-function toggleButton0() {
+function toggleButtons() {
   var button0 = document.getElementById("button0");
   var button00 = document.getElementById("button00");
   button0.disabled = resetInputDistance;
